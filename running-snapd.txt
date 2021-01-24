@@ -1,0 +1,21 @@
+sudo snap install kubectl --classic
+
+error: cannot communicate with server: Post http://localhost/v2/snaps/kubectl: dial unix /run/snapd.socket: connect: no such file or directory
+
+sudo systemctl unmask snapd.service
+
+systemctl enable snapd.service
+
+systemctl start snapd.service
+
+https://askubuntu.com/questions/1258137/cannot-communicate-with-server-post-http-localhost-v2-apps-dial-unix-run-sn
+
+sudo snap install kubectl --classic
+
+error: cannot install "kubectl": classic confinement requires snaps under /snap
+       or symlink from /snap to /var/lib/snapd/snap
+
+sudo ln -s /var/lib/snapd/snap /snap
+
+2021-01-23T09:22:08-07:00 INFO Waiting for restart...
+kubectl 1.20.2 from Canonical✓ installed

@@ -5,6 +5,7 @@ metadata:
   labels:
     creation_method: manual
     env: prod
+  namespace: custom-namespace
 spec:
   nodeSelector:
     gpu: "true"

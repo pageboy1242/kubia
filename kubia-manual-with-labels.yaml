@@ -6,6 +6,8 @@ metadata:
     creation_method: manual
     env: prod
 spec:
+  nodeSelector:
+    gpu: "true"
   containers:
   - image: pageboy/kubia
     name: kubia

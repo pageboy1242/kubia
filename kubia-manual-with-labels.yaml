@@ -5,7 +5,7 @@ metadata:
   labels:
     creation_method: manual
     env: prod
-  namespace: custom-namespace
+    app: kubia
 spec:
   nodeSelector:
     gpu: "true"

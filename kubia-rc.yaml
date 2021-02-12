@@ -5,14 +5,19 @@ metadata:
 spec:
   replicas: 3
   selector:
-    app: kubia
+    app: kubia-app
   template:
     metadata:
       labels:
-        app: kubia
+        app: kubia-app
     spec:
       containers:
       - name: kubia
         image: pageboy/kubia
         ports:
         - containerPort: 8010
+        readinessProbe:
+          exec:
+            command:
+            - ls
+            - /var/ready

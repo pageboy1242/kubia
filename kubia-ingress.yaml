@@ -4,7 +4,8 @@ metadata:
   name: kubia-ingress
 spec:
   rules:
-  - http:
+  - host: kubia.example.com
+    http:
       paths:
       - path: /
         pathType: Prefix
